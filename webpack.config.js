@@ -12,6 +12,7 @@ module.exports = {
     tickets: "./assets/js/tickets.js",
   },
   output: {
+    publicPath: "",
     filename: "[name].bundle.js",
     path: `${__dirname}/dist`,
   },
@@ -58,7 +59,7 @@ module.exports = {
       inject: false,
       icons: [
         {
-          src: path.resolve("assets/img/icons/icon-512x512.png"),
+          src: path.resolve(__dirname, "assets/img/icons/icon-512x512.png"),
           sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join("assets", "icons"),
         },
